@@ -26,6 +26,11 @@
             width: 120px;
         }
 
+        input#buttomReset {
+            margin-top: 12px;
+            width: 120px;
+        }
+
         div#result {
             margin-top: 12px;
             font: bold 48px Arial;
@@ -41,6 +46,7 @@
     <input type="number" name="n2" id="ni2">
 
     <input type="button" value="Sum" id="buttomSum" onclick="sum()">
+    <input type="button" value="Reset" id="buttomReset" onclick="reset()">
     <div id="result">Result</div>
 
     <script>
@@ -56,6 +62,16 @@
             var result = n1+n2
 
             resultDiv.innerHTML = `${result}`
+        }
+
+        function reset() {
+            var input1 = document.querySelector('input#ni1')
+            var input2 = document.querySelector('input#ni2')
+            var result = document.querySelector('div#result')
+
+            input1.value = 
+            input2.value = 
+            result.innerHTML = 'Result'
         }
 
     </script>
