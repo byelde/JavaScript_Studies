@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUM NUMBERS</title>
+
+    <style>
+
+        body {
+            display: grid;
+            place-items: center;
+            background-color: blanchedalmond;
+        }
+
+        h1 {
+            font: bold 48px Arial;
+        }
+
+        div#result {
+            font: bold 30px Arial;
+        }
+
+        input#buttomSum {
+            margin-top: 12px;
+            width: 120px;
+        }
+
+        div#result {
+            margin-top: 12px;
+            font: bold 48px Arial;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>SUM NUMBERS</h1>
+    
+    <input type="number" name="n1" id="ni1">
+    +
+    <input type="number" name="n2" id="ni2">
+
+    <input type="button" value="Sum" id="buttomSum" onclick="sum()">
+    <div id="result">Result</div>
+
+    <script>
+        
+        function sum() {
+
+            var imput1 = document.getElementById('ni1')
+            var input2 = document.querySelector('input#ni2')
+            var n1 = Number(imput1.value)
+            var n2 = Number(input2.value)
+
+            var resultDiv = document.querySelector('div#result')
+            var result = n1+n2
+
+            resultDiv.innerHTML = `${result}`
+        }
+
+    </script>
+</body>
+</html>

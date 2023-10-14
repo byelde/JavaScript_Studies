@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events</title>
+    <style>
+        body {
+            background-color: aquamarine;
+        }
+
+        h1#title {
+            font: bold 32px Arial;
+        }
+
+        div#mousearea {
+            width: 200px;
+            height: 100px;
+            display: grid;
+            place-items: center;
+            background-color: white;
+            font: normal 20px Arial;
+        }
+
+        div#clickarea {
+            width: 200px;
+            height: 100px;
+            display: grid;
+            place-items: center;
+            background-color: bisque;
+            font: normal 20px Arial;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="title">DOM Events</h1>
+
+    <div id="mousearea">
+        Pass the mouse
+    </div>
+    <div id ='clickarea' onclick="mouseClick()">
+        Click
+    </div>
+
+
+    <script>
+        divInOut = document.querySelector('div#mousearea')
+        divClick = document.querySelector('div#clickarea')
+
+        divInOut.addEventListener('mouseenter', mouseIn)
+        divInOut.addEventListener('mouseout', mouseOut)
+        divClick.addEventListener('click', mouseClick)
+        divClick.addEventListener('mouseout', mouseClickOut)
+        
+        function mouseIn () {
+            divInOut.innerText= 'Taking a look...'
+        }
+
+        function mouseOut () {
+            divInOut.innerText = 'Pass the mouse'
+        }
+
+        function mouseClick() {
+            divClick.innerText = 'Clicked!!!'
+        }
+        
+        function mouseClickOut() {
+            divClick.innerText = 'Click'
+        }
+
+    </script>
+</body>
+</html>
