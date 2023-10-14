@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM first steps</title>
+    <style>
+        body {
+            background-color:crimson;
+            color: rgb(255, 255, 255);
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Working on DOM</h1>
+
+    <p>First steps with <strong>DOM</strong>.</p>
+    <p>Result</p>
+    
+    <div id='clickbuttom'>Click here!</div>
+    <div class='clickbuttom2'> Click here too!</div>
+    <div name='clickbuttom3'> Click again.</div>
+
+    <br>
+
+    <script>
+
+        window.document.write(`Writing with Js,<br>`)
+        window.document.write(` Charset: ${document.charset},<br>`)
+        window.document.write(`Appname: ${window.navigator.appName}, <br>`)
+        window.document.write(`URL: ${window.document.URL},<br>`)
+
+        var p0 = window.document.getElementsByTagName('p')[0]
+        var corpo = window.document.body
+        var divClick = window.document.querySelector('div#clickbuttom') // We can use getElementsById or querySelector
+        var divClick2 = document.querySelector('div.clickbuttom2') // "#" for id and "." for classes
+        var divClick3 = document.getElementsByName('clickbuttom3')[0]
+
+        /*
+        getElementById
+        getElementsByName
+        getElementsByTagName
+        getElementsByClassName
+        */
+
+        window.document.write(`innertHTML: ${p0.innerText}<br>`)
+        window.document.write(`innerText: ${p0.innerHTML}<br>`)
+        document.write(`DivClick2 innerText: ${divClick2.innerText}`)
+        
+        corpo.style.backgroundColor = 'black'
+        p0.style.color = 'red'
+
+        divClick.style.backgroundColor = 'white'
+        divClick.style.color = 'red'
+        divClick.innerHTML='You haven`t clicked yet...'
+
+        divClick2.innerHTML='Click for god!!!'
+        
+    </script>
+</body>
+</html>
