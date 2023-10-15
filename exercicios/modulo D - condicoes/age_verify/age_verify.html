@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age verify</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+    <h1>AGE VERIFY</h1>
+
+    <div class="card">
+
+        <div>
+            <p class="text">Year of birth:
+            <input class='inputyear' type="number" name="inputyear" id="inputyear">
+            </p>
+        </div>
+
+        <div class="sex" >
+            <p>Sex:
+            <input type="radio" name="input_sex" id="input_masc" checked>
+            <label for="input_masc">Masculine</label>
+            <input type="radio" name="input_sex" id="input_fem">
+            <label for="input_fem">Female</label>
+            </p>
+        </div>
+
+        
+        <div class="resp">
+            <img class = 'result' src="./assets/img/empty.png" alt="">
+        </div>
+    </div>
+    
+    <div>
+        <input class="verifybuttom" type="button" value="Verify" onclick="verify()">
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+
+</body>
+</html>
