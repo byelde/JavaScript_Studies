@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocity Check</title>
+</head>
+<body>
+
+    <h1>Velocity Check</h1>
+    Your velocity: <input type="number" name="vel" id="vel"> km/h
+    <div id="awser"> Will you receive a traffic ticket? </div>
+    <input type="button" value="Verify" onclick="check()">
+
+    <script>
+        function check() {
+
+            input_vel = document.querySelector('input#vel') 
+            div_awser = document.querySelector('div#awser') 
+            var vel = Number(input_vel.value)
+
+            if (vel>40) {
+                div_awser.innerHTML = 'Yes'
+            } else {
+                div_awser.innerHTML = 'No'
+            }
+
+        }
+    </script>
+
+</body>
+</html>

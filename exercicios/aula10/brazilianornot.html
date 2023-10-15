@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brazilian or not</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font: bold 48px Verdana;
+        }
+
+        div#elements {
+            font: normal 32px Arial;
+        }
+
+        div#result {
+            font: normal 32px Arial;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Brazilian or not</h1>
+    <div id='elements'>
+        Your nationality: <input type="text" id="natioinput">
+        <input type="button" value="Run" onclick="test()">
+    </div>
+    <div id="result">You`re brazilian?</div>
+
+    <script>
+
+        function test() {
+            result_div = document.querySelector('div#result')
+            var nation = document.querySelector('input#natioinput').value
+
+            // result_div.innerHTML = `You country is ${nation}.`
+
+            if (nation == 'Brasil' || nation == 'Brazil') {
+                result_div.innerHTML = ' HELL! YES! You are BRAZILIAN'
+            } else {
+                result_div.innerHTML = ' No... You are NOT brazilian'
+            }
+        }
+
+    </script>
+</body>
+</html>
