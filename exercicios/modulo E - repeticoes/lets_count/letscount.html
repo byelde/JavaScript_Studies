@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let`s count</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <h1>LET`S COUNT</h1>
+
+    <div class="card">
+        
+        <div class="card_parent">
+            <div class="start"> 
+                Start: <input class='start 'type="number" name="start" id="start">
+            </div>
+    
+            <div class="end"> 
+                End: <input class='end 'type="number" name="end" id="end">
+            </div>
+    
+            <div class="step"> 
+                Step: <input class='step 'type="number" name="step" id="step">
+            </div>
+        </div>
+
+        <input class="count" type="button" value="Count" onclick="count()">
+
+        <div class="counting" >Counting:</div>
+        <div class="result"></div>
+
+    </div>
+</body>
+<script src="./assets/js/script.js"></script>
+</html>
